@@ -1,10 +1,12 @@
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Create from "./Create";
+
 import BlogDetails from "./BlogDetails";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import React from "react";
 import NotFound from "./NotFound";
+import Login from "./Login";
 function App() {
   // const title = "Welcome to Nzera's-Blog"
   return(  
@@ -21,6 +23,9 @@ function App() {
             </Route>
             <Route path="/blogs/:id">
               <BlogDetails></BlogDetails>
+            </Route>
+            <Route exact path ="/login">
+              <Login></Login>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

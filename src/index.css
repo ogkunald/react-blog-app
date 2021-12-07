@@ -122,3 +122,33 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.login label {
+  text-align: left;
+  display: block;
+}
+
+.login input,
+.login textarea,
+.login select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  width: 100%;
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
