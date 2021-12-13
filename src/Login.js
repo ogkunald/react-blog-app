@@ -10,7 +10,7 @@ const  Login = () =>  {
         const newEntry = {email:email,password:password};
 
         setAllEntry([...allEntry,newEntry]);
-        console.log(allEntry);
+        console.log();
     }
     return (
         <div className = "login">

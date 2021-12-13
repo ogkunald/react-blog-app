@@ -5,12 +5,12 @@ import useFetch from './useFetch';
 const BlogDetails = () => {
     // @ts-ignore
     const {id} = useParams();
-    const {data:blog,isPending,error} = useFetch("http://localhost:8000/blogs/"+id);
+    const {data:blog,isPending,error} = useFetch("http://localhost:9090/blogs/"+id);
     const history = useHistory();
     const handleClick  = () => {
-        fetch("http://localhost:8000/blogs/"+id,{
+        fetch("http://localhost:9090/blogs/delete/"+id,{
 
-            method: "DELETE"
+            method: "PUT"
         }).then(() => {
             history.push("/");
         })

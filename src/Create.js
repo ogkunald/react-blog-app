@@ -11,7 +11,7 @@ const Create = () => {
         e.preventDefault();
         const blog = {title,body,author};
         setIsPending(true);
-        fetch('http://localhost:8000/blogs',{ 
+        fetch('http://localhost:9090/blogs/add/',{ 
             method: "POST",
             headers: {"Content-type":"application/json"},
             body: JSON.stringify(blog)
@@ -43,8 +43,9 @@ const Create = () => {
                 <select
                     value = {author}
                     onChange = {(e)=> setAuthor(e.target.value)}
-                >
-                    <option value = "mario">Mario</option>
+                >   
+                    <option selected value = "none">Select From list below</option>
+                    <option selected value = "mario">Mario</option>
                     <option value="yoshi">Yoshi</option>
                 </select>
                 {!isPending && <button>Add Blog</button>}
